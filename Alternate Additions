@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int T;
+  cout<<"Enter number of test cases."<<endl;
+  cin>>T;
+  for(int i=0; i<T ;i++)
+   {
+     int a,b;
+     cout<<"Enter the value in  number A."<<endl;
+     cin>>a;
+     cout<<"Enter the value in  number B."<<endl;
+     cin>>b;
+     int k=1;
+     while(a<b)
+       {
+         if(k%2!=0)
+         {
+           a+=1;
+           cout<<a;
+         }
+         else
+         {
+           a+=2;
+           cout<<a;
+         }
+         k+=1;
+       }
+     cout<<a;
+     if(a==b)
+     {
+       cout<<"YES";
+     }
+     else
+     {
+       cout<<"NO";
+     }
+    }
+}

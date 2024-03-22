@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int T;
+  cout<<"Enter number of test cases."<<endl;
+  cin>>T;
+  for(int i=0; i<T ;i++)
+   {
+     int n;
+     cout<<"Enter the no. of coins"<<endl;
+     cin>>n;
+     int a=0,b=n;
+     for(int j=1;j<n;j++)
+       {
+         b=b-j;
+         a++;
+         if(b<=j)
+           break;
+       }
+     cout<<a<<endl;
+  }
+}

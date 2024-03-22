@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int T;
+  cout<<"Enter number of test cases."<<endl;
+  cin>>T;
+  for(int i=0; i<T ;i++)
+  {
+      int N,X;
+      cout<<"Enter number of items."<<endl;
+      cin>>N;
+      cout<<"Enter the minimum freshness value an item should have."<<endl;
+      cin>>X;
+      int a[N];
+      int b[N];
+      cout<<"Enter the freshness value the item."<<endl;
+      for(int j=0;j<N;j++)
+      {
+          cin>>a[j];
+      }
+      cout<<"Enter the cost of the item."<<endl;
+      for(int j=0;j<N;j++)
+      {
+          cin>>b[j];
+      }
+      int w=0;
+      for(int j=0;j<N;j++)
+      {
+          if(a[j]>=X)
+          {
+              w=b[j]+w;
+          }
+      }
+      cout<<"total cost of the groceries Chef buys "<<w<<endl;
+  }
+  return 0;
+}

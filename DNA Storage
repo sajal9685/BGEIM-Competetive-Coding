@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int T;
+    cout<<"Enter number of test cases."<<endl;
+    cin>>T;
+    for(int i=0; i<T ;i++)
+    {
+      int n;
+      cout<<"Enter the length of the sequence."<<endl;
+      cin>>n;
+      if(n%2!=0){
+        cout<<"invalid input"<<endl;
+        break;
+      }
+      string s;
+      cout<<"Enter the String S of length N."<<endl;
+      cin>>s;
+      if(s.length()!=n){
+        cout<<"invalid input"<<endl;
+        break;
+      }
+      string w="";
+      for(int i=0;i<n;i+=2)
+      {
+
+        char a=s[i];
+        char b=s[i+1];
+         if(a=='0' && b=='0') 
+          w += "A";
+         if(a=='0' && b=='1') 
+          w += "T";
+         if(a=='1' && b=='0') 
+          w += "C";
+         if(a=='1' && b=='1') 
+          w += "G";
+      }
+      cout<<w<<endl;
+    }
+  return 0;
+}
